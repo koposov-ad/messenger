@@ -12,20 +12,25 @@
   "dependencies": {
     "@nuxt/eslint": "^1.10.0",
     "@nuxt/icon": "^2.1.0",
-    "@nuxt/test-utils": "^3.20.1",
     "@nuxtjs/color-mode": "^3.5.2",
+    "@pinia/nuxt": "^0.11.2",
     "@unocss/nuxt": "^66.5.4",
     "@unocss/reset": "^66.5.4",
     "@vueuse/nuxt": "^14.0.0",
     "eslint": "^9.38.0",
     "nuxt": "^4.2.0",
+    "pinia": "^3.0.3",
     "sass": "^1.93.2",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.1.0",
+    "@nuxt/test-utils": "^3.20.1",
+    "@vue/test-utils": "^2.4.6",
     "eslint": "^9.38.0",
-    "unocss": "^66.5.4"
+    "happy-dom": "^20.0.10",
+    "unocss": "^66.5.4",
+    "vitest": "^3.2.4"
   }
 }
