@@ -1,0 +1,32 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Jetbrains IDE
+!.idea
+.idea/*
+!.idea/icon.svg
+!.idea/jsLinters
+.idea/jsLinters/*
+!.idea/jsLinters/eslint.xml
+
+ # Other IDE
+.fleet
+.vscode
+.DS_Store
+
+# Local env files
+.env
+.env.*
+!.env.example
