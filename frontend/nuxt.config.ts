@@ -56,10 +56,22 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: '/api',
+      keycloak: {
+        url: 'https://sso.keyid.rt.ru/',
+        realm: 'se',
+        clientId: 'se_web',
+      },
+      ws: {
+        url: 'http://localhost:3000',
+      },
     },
   },
 
-  css: ['@/app/assets/styles/main.scss'],
+  css: [
+    '@unocss/reset/tailwind.css',
+    '@/assets/styles/main.scss',
+  ],
+
   app: {
     head: {
       title: 'Messenger',
@@ -72,11 +84,12 @@ export default defineNuxtConfig({
   devServer: {
     port: 3050,
   },
+
   nitro: {
     routeRules: {
       '/api/**': {
         // eslint-disable-next-line node/prefer-global/process
-        proxy: `${process?.env?.DEV_PROXY_BACKEND}/**`,
+        proxy: `${process?.env?.NUXT_PUBLIC_WS_URL ?? 'http://localhost:3000'}/api/**`,
       },
     },
   },

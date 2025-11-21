@@ -19,11 +19,14 @@
     "@vueuse/nuxt": "^14.0.0",
     "eslint": "^9.38.0",
     "keycloak-js": "^26.2.1",
+    "md-editor-v3": "^6.1.1",
     "nuxt": "^4.2.0",
     "pinia": "^3.0.3",
     "sass": "^1.93.2",
+    "socket.io-client": "^4.8.1",
     "vue": "^3.5.22",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.1.0",

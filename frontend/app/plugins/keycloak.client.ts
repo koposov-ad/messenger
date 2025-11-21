@@ -1,20 +1,24 @@
 import Keycloak from 'keycloak-js'
 
-export default defineNuxtPlugin((nuxtApp) => {
+// TODO: Без конфига выдать ошибку
+
+export default defineNuxtPlugin(() => {
+  const config = useRuntimeConfig().public.keycloak
+
   const keycloak = new Keycloak({
-    url: 'https://sso.keyid.rt.ru/',
-    realm: 'se',
-    clientId: 'se_web',
+    url: config?.url,
+    realm: config?.realm,
+    clientId: config?.clientId,
   })
 
-  keycloak.init({
-    onLoad: 'login-required',
-    checkLoginIframe: false,
-  }).then((authenticated) => {
-    if (!authenticated) {
+  keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+    if (!authenticated)
       keycloak.login()
-    }
   })
 
-  nuxtApp.provide('keycloak', keycloak)
+  return {
+    provide: {
+      keycloak,
+    },
+  }
 })

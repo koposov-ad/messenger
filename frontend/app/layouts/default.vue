@@ -1,13 +1,7 @@
 <template>
-  <div class="app-wrapper">
+  <div class="flex flex-col size-screen">
     <slot />
   </div>
 </template>
 
-<style scoped>
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-</style>
+<style scoped></style>
